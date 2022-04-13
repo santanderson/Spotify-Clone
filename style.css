@@ -188,6 +188,14 @@ main section button:hover
     background-color: #39db72;
 }
 
+/*Footer*/
+
+footer
+{
+    background-color: black;
+    padding: 50px 15px 30px;
+}
+
 /*Break Points*/
 
 @media(min-width:680px)
