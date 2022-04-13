@@ -8,6 +8,7 @@ body
 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --main-color:#1ED760;
+    --secondary-color: rgb(41, 65, 171);
 }
 
 header
@@ -134,8 +135,77 @@ header #mobile-menu
     font-weight: 400;
 }
 
+/*Main Content*/
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    background-image: url("https://www-growth.scdn.co/static/home/bursts-mobile.svg");
+    background-position: center top 40%;
+    background-repeat: no-repeat;
+    background-size: 215%;
+}
+main section
+{
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    padding: 5px;
+}
+main section h1
+{
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+main section h3
+{
+    color: var(--main-color);
+    font-size: 15px;
+}
+main section button
+{
+    border: none;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    width: 300px;
+    height: 48px;
+    padding: 10px;
+    border-radius: 35px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+main section button:hover
+{
+    cursor: pointer;
+    background-color: #39db72;
+}
+
 /*Break Points*/
 
+@media(min-width:680px)
+{
+    main
+    {
+        background-size: 140%;
+        background-position: center 45%;
+    }
+    main section
+    {
+        width: 100%;
+    }
+    main section h1
+    {
+        font-size: 100px;
+    }
+}
 @media(min-width:990px)
 {
     header
@@ -160,6 +230,11 @@ header #mobile-menu
     {
         display: flex;
     }
+    main
+    {
+        min-height: 846px;
+        background-size: 85%;
+    }
 }
 
 @media(min-width:1200px)
@@ -168,5 +243,9 @@ header #mobile-menu
     {
         padding-left: 7%;
         padding-right: 7%;
+    }
+    main section h1
+    {
+        font-size: 140px;
     }
 }
