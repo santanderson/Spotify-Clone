@@ -77,6 +77,8 @@ header #mobile-button
     border: none;
     background: transparent;
     z-index: 999;
+    top: 13px;
+    right: 20px;
 }
 
 /*Mobile Menu*/
