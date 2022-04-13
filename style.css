@@ -9,6 +9,7 @@ body
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --main-color:#1ED760;
     --secondary-color: rgb(41, 65, 171);
+    --grey-color: rgb(158, 158, 158);
 }
 
 header
@@ -55,7 +56,7 @@ header #menu li a, #mobile-menu #items li a
 }
 header #menu li a.register
 {
-    color: rgb(199, 199, 199);
+    color: var(--grey-color);
 }
 header #menu li:hover, #mobile-menu #items li:hover
 {
@@ -192,10 +193,96 @@ main section button:hover
 
 footer
 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     background-color: black;
-    padding: 50px 15px 30px;
+    padding: 50px 15px 15px;
+    height: 1100px;
 }
+footer #FAQ
+{
+    font-size: 16px;
+    width: 100%;
+}
+footer #FAQ ul h1
+{
+    margin: 50px 0 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--grey-color);
+}
+footer #FAQ ul li
+{
+    padding: 10px 0px;
 
+}
+footer #FAQ ul li:hover a
+{
+    color: var(--main-color);
+}
+footer #FAQ ul a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+footer #credits
+{
+    font-size: 10px;
+    width: 100%;
+}
+footer #FAQ #social-network button
+{
+    background-color: rgb(39, 39, 39);
+    color: white;
+    border: none;
+    width: 43px;
+    height: 43px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 40px;
+    margin: 130px 10px 0 0;
+}
+#FAQ #social-network button:hover
+{
+    cursor: pointer;
+    color: var(--main-color);
+}
+footer #credits
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer #credits a
+{
+    color: var(--grey-color);
+    text-decoration: none;
+}
+footer #credits a:hover
+{
+    color: var(--main-color);
+    cursor: pointer;
+}
+footer #credits #legal
+{
+    width: 130px;
+    height: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: space-between;
+}
+footer #credits #copywrite
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 40px;
+    color: var(--grey-color);
+}
 /*Break Points*/
 
 @media(min-width:680px)
@@ -212,6 +299,20 @@ footer
     main section h1
     {
         font-size: 100px;
+    }
+    footer
+    {
+        padding-bottom: 30px;
+    }
+    footer #FAQ #social-network button
+    {
+        margin-top: 200px;
+    }
+    footer #credits #legal
+    {
+        height: 40px;
+        width: 400px;
+        align-items: flex-end;
     }
 }
 @media(min-width:990px)
@@ -242,6 +343,26 @@ footer
     {
         min-height: 846px;
         background-size: 85%;
+    }
+    footer
+    {
+        align-items: center;
+        height: 532px;
+        padding: 100px 50px 70px;
+    }
+    footer #FAQ
+    {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    footer #FAQ #social-network button
+    {
+        margin-top: 40px;
+    }
+    footer #credits
+    {
+        font-size: 13px;
     }
 }
 
